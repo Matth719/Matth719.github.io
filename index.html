@@ -1,7 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina di Ringraziamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #thankyou-text {
+            margin-top: 30px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+    <h1>Ringraziamenti e Crittografia</h1>
+
+    <p>
+        I ringraziamenti sono stati codificati utilizzando il cifrario di Vigenere, 
+        un cifrario polialfabetico (il primo!) in cui la parola chiave (detta verme) 
+        viene ripetuta per tutta la lunghezza del testo da cifrare.<br>
+        Per decodificare i ringraziamenti, serve inserire la parola chiave. 
+        Leggendo attentamente il titolo, qual è la tipologia di crittografia che ho trattato nella mia tesi?
+    </p>
+
+    <input type="text" id="keyword" placeholder="Inserisci la parola chiave">
+    <button onclick="checkKeyword()">Decifra</button>
+
+    <p id="thankyou-text" class="hidden">Hai decifrato correttamente! Grazie per aver scoperto la crittografia omomorfica.</p>
+
+    <script>
+        function checkKeyword() {
+            var keyword = document.getElementById("keyword").value.toLowerCase();
+            if (keyword === "homomorphic") {
+                document.getElementById("thankyou-text").classList.remove("hidden");
+            } else {
+                alert("Parola chiave errata. Riprova.");
+            }
+        }
+    </script>
+
 </body>
 </html>
