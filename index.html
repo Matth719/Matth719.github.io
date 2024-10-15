@@ -80,17 +80,9 @@
         }
 
         #thankyou-text {
-            display: none;
             font-size: 18px;
             color: #333;
             margin-top: 30px;
-        }
-
-        footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #777;
-            text-align: center;
         }
     </style>
 </head>
@@ -126,6 +118,7 @@
             const keyword = document.getElementById("keyword").value;
             const thankYouText = document.getElementById("thankyou-text");
             const expectedKeyword = "homomorphic"; // Cambia qui con la chiave corretta
+            thankYouText.style.display = "block"; // Mostra il div di testo di ringraziamento
             if (keyword.toLowerCase() === expectedKeyword) {
                 thankYouText.innerHTML = "<p>Grazie per aver partecipato! I tuoi contributi sono molto apprezzati.</p>";
             } else {
