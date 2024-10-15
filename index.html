@@ -110,32 +110,28 @@
     <script>
         function showFullContent() {
             document.getElementById("content").innerHTML = `
-                <h1>Ringraziamenti</h1>
-                <p>I ringraziamenti sono stati codificati utilizzando il cifrario di Vigenere, 
-                un cifrario polialfabetico (il primo!) in cui la parola chiave (detta verme) 
-                viene ripetuta per tutta la lunghezza del testo da cifrare.</p>
-                <p>Per decodificare i ringraziamenti, serve inserire la parola chiave. 
-                Leggendo attentamente il titolo, qual è la tipologia di crittografia che ho trattato?</p>
-                <input type="text" id="key" placeholder="Inserisci la chiave" />
-                <button onclick="checkKey()">Invia</button>
-                <div id="thankyou-text">Grazie per il tuo interesse!</div>
-            `;
+            <h1>Ringraziamenti</h1>
+            <p>I ringraziamenti sono stati codificati utilizzando il cifrario di Vigenere, 
+            un cifrario polialfabetico (il primo!) in cui la parola chiave (detta verme) 
+            viene ripetuta per tutta la lunghezza del testo da cifrare.</p>
+            <p>Per decodificare i ringraziamenti, serve inserire la parola chiave. 
+            Leggendo attentamente il titolo, qual è la tipologia di ringraziamento che 
+            è stato utilizzato?</p>
+            <input type="text" id="keyword" placeholder="Inserisci la tua chiave" />
+            <button onclick="checkKeyword()">Invia</button>
+            <div id="thankyou-text"></div>`;
         }
 
-        function checkKey() {
-            const keyInput = document.getElementById("key").value.trim();
-            const correctKey = "vigenere"; // Sostituisci con la tua chiave corretta
-
-            if (keyInput.toLowerCase() === correctKey) {
-                document.getElementById("thankyou-text").style.display = "block";
+        function checkKeyword() {
+            const keyword = document.getElementById("keyword").value;
+            const thankYouText = document.getElementById("thankyou-text");
+            const expectedKeyword = "il tuo amore"; // Cambia qui con la chiave corretta
+            if (keyword.toLowerCase() === expectedKeyword) {
+                thankYouText.innerHTML = "<p>Grazie per aver partecipato! I tuoi contributi sono molto apprezzati.</p>";
             } else {
-                alert("Parola chiave errata. Riprova.");
+                thankYouText.innerHTML = "<p>Chiave errata. Riprova!</p>";
             }
         }
     </script>
-
-    <footer>
-        <p>© 2024 Il tuo Nome</p>
-    </footer>
 </body>
 </html>
