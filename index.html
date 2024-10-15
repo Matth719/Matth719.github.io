@@ -124,14 +124,15 @@
 
         function checkKeyword() {
             var keyword = document.getElementById("keyword").value.toLowerCase();
-            var correctKeyword = "homomorphic"; // Cambia qui la parola chiave
+            var correctKeyword = "verme"; // Cambia qui la parola chiave
 
             if (keyword === correctKeyword) {
                 // Nascondi il contenuto iniziale
                 document.getElementById("content").style.display = "none";
                 
-                // Mostra i ringraziamenti
-                document.getElementById("thankyou-text").innerHTML = `
+                // Mostra solo i ringraziamenti
+                var thankYouText = document.getElementById("thankyou-text");
+                thankYouText.innerHTML = `
                 <h1>Ringraziamenti</h1>
                 <p>Ringrazio il mio relatore, il professor Visconti, per avermi guidato durante gli ultimi mesi del mio percorso universitario e avermi dato la possibilità di approfondire una mia grande passione.</p>
                 <p>Ringrazio i gruppi della zona nord-ovest di Milano (non vi elenco, siete in troppi) che tra Burek, tronchetti, ore a scambiarci nozioni di matematica e informatica, minacce di non poter abbandonare il paese e lezioni di cuticole hanno contenuto l’irascibilità che potrei aver leggermente manifestato nell’ultimo periodo. A me. No, a voi. No, a noi. Hip hip hooray.</p>
@@ -139,8 +140,8 @@
                 <p>Ringrazio i miei due grandi amici Nick, Vale e Jux (il conto è, per ovvie ragioni, corretto): in questi anni mi avete dato tanto, mi siete stati accanto nei momenti peggiori e in quelli migliori, abbiamo complottato, discusso e preso in giro; abbiamo vissuto ciò che ho sempre definito profonda amicizia. Ho accanto persone di cui mi fido ciecamente. Per ogni giorno, ogni istante, ogni attimo che sto vivendo, grazie mille.</p>
                 <p>Grazie a tutta la mia numerosa famiglia: nonni, zii, cugini di primo, secondo, terzo grado, acquisiti e non. Avete sempre fatto il tifo per me e soddisfatto le mie necessità fameliche. Soprattutto, un enorme grazie ai miei genitori che hanno versato fior fior di soldi nella speranza che tutti questi anni di studio dessero i loro frutti. Grazie per avermi consigliato, aiutato a scaricare l’ansia con le camminate in sala, consolato per gli esami falliti con i giri nel parco. Grazie per esserci sempre stati.</p>
                 <p>So che adesso ti aspetteresti di leggere quanto mi hai stressato e reso più faticoso quest’ultimo periodo, ma la realtà è che non è vero. Ale, tu mi hai supportato, sostenuto, tranquillizzato, ascoltato, sconfitto a Machiavelli più volte di quanto io voglia ammettere e, soprattutto, mi hai fatto conoscere Sherlock. Tu non hai idea di quanto il tuo supporto abbia alleggerito questi anni universitari, anche quando ero troppo scoraggiato per impegnarmi. Mi hai aiutato molto, passo dopo passo, sempre accanto. Grazie anche per avermi dato il permesso di utilizzare la tua iniziale in entrambe le tesi.`;
-
-                document.getElementById("thankyou-text").style.display = "block";
+                
+                thankYouText.style.display = "block";
             } else {
                 alert("Parola chiave errata. Riprova.");
             }
