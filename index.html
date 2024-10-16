@@ -157,7 +157,7 @@
     <script>
         function checkKeyword() {
             var keyword = document.getElementById("keyword").value.toLowerCase();
-            var correctKeyword = "homomorphic1"; // Cambia qui la parola chiave
+            var correctKeyword = "homomorphic2"; // Cambia qui la parola chiave
 
             if (keyword === correctKeyword) {
                 document.getElementById("content").innerHTML = `
@@ -178,10 +178,12 @@
                     <p>So che adesso ti aspetteresti di leggere quanto mi hai stressato e reso più faticoso quest'ultimo periodo, ma la realtà è che non è vero. Ale, tu mi hai supportato, sostenuto, tranquillizzato, ascoltato, sconfitto a Machiavelli più volte di quanto io voglia ammettere e, soprattutto, mi hai fatto conoscere Sherlock. Tu non hai idea di quanto il tuo supporto abbia alleggerito questi anni universitari, anche quando ero troppo scoraggiato per impegnarmi. Mi hai aiutato molto, passo dopo passo, sempre accanto. Grazie anche per avermi dato il permesso di utilizzare la tua iniziale in entrambe le tesi.</p>
                 </div>
                 `;
+                window.scrollTo(0, 0);  // Aggiunge il comando per riportare la pagina in cima
             } else {
                 alert("Parola chiave errata. Riprova.");
             }
         }
+
     </script>
 
 </body>
