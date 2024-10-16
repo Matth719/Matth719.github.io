@@ -152,7 +152,7 @@
         </div>
 
         <div class="decryption-section" id="decryption" style="display:none;">
-            <h2>Decodifica i Ringraziamenti</h2>
+            <h2>Decodifica i ringraziamenti</h2>
             <p>I ringraziamenti sono stati codificati utilizzando il cifrario di Vigenere, 
                 un cifrario polialfabetico (il primo!) in cui la parola chiave (detta verme) 
                 viene ripetuta per tutta la lunghezza del testo da cifrare.</p>
@@ -177,7 +177,7 @@
         document.getElementById("submit-btn").addEventListener("click", function() {
             var keyword = document.getElementById("keyword").value;
             var thankyouText = "";
-            if (keyword === "homomorphic") { // Sostituisci con la tua parola chiave
+            if (keyword.toLowerCase() === "homomorphic") { // Sostituisci con la tua parola chiave
                 thankyouText = "<h1>Ringraziamenti</h1>" +
                                "<p>Ringrazio il mio relatore, il professor Visconti, per avermi guidato durante gli ultimi mesi del mio percorso universitario e avermi dato la possibilità di approfondire una mia grande passione.</p>" +
                                "<p>Ringrazio i gruppi della zona nord-ovest di Milano (non vi elenco, siete in troppi) che tra Burek, tronchetti, ore a scambiarci nozioni di matematica e informatica, minacce di non poter abbandonare il paese e lezioni di cuticole hanno contenuto l'irascibilità che potrei aver leggermente manifestato nell'ultimo periodo. A me. No, a voi. No, a noi. Hip hip hooray.</p>" +
